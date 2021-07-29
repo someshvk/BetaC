@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Set Your Profile"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:id="@+id/textview"
+        android:layout_marginTop="40dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/textview"
+        android:layout_marginTop="50dp"
+        android:id="@+id/getUserImg"
+        app:cardCornerRadius="130dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile_png_icon"
+            android:id="@+id/getUserImgIV"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/getUserName"
+        android:layout_centerInParent="true"
+        android:hint="Enter Your Name"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:background="@color/light_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/light"
+        android:padding="16dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="save"
+        android:textColor="@color/dark"
+        android:textColorHighlight="@color/dark_green"
+        android:textStyle="bold"
+        app:backgroundTint="@color/green"
+        android:layout_below="@id/getUserName"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/saveBtn"
+        android:layout_marginTop="100dp"
+        android:visibility="invisible"
+        android:id="@+id/progressBarSetProfile" />
+
+
+</RelativeLayout>

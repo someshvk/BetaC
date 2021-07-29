@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BetaaC</string>
+    <string name="enter_your_phone_number_here">Enter your phone number here</string>
+    <string name="enter_the_verification_code_sent_to_your_number">Enter the Verification code sent to your number</string>
+</resources>

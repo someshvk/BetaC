@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textview2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/enter_your_phone_number_here"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
+
+    <RelativeLayout
+        android:id="@+id/centralLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <com.hbb20.CountryCodePicker
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:ccp_areaCodeDetectedCountry="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:id="@+id/countryCodePicker"
+        app:ccp_autoDetectCountry="true"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/centralLine"
+        app:ccp_arrowColor="@color/white"
+        app:ccpDialog_textColor="@color/white"
+        app:ccpDialog_backgroundColor="@color/light_dark"
+        app:ccp_contentColor="@color/white"
+        android:background="@color/light_dark"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Phone Number"
+        android:textColorHint="@color/light"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:id="@+id/phoneNumber"
+        android:textAlignment="center"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/countryCodePicker"
+        android:background="@color/light_dark"
+        />
+
+    <Button
+        android:id="@+id/otpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="send otp"
+        android:textColor="@color/dark"
+        android:textColorHighlight="@color/dark_green"
+        android:textStyle="bold"
+        app:backgroundTint="@color/green"
+        android:layout_below="@id/phoneNumber"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/otpBtn"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        android:id="@+id/progressBarMain" />
+
+
+</RelativeLayout>

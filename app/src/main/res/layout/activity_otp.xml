@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textview2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".user.OtpActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/enter_the_verification_code_sent_to_your_number"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
+
+    <RelativeLayout
+        android:id="@+id/centralLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Verification Code"
+        android:textColorHint="@color/light"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:id="@+id/veriftnCode"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:ems="6"
+        android:layout_above="@id/centralLine"
+        android:background="@color/light_dark"
+        />
+
+    <Button
+        android:id="@+id/verifyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="verify"
+        android:textColor="@color/dark"
+        android:textColorHighlight="@color/dark_green"
+        android:textStyle="bold"
+        app:backgroundTint="@color/green"
+        android:layout_below="@id/veriftnCode"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Did not get the code? Resend"
+        android:textColor="@color/light"
+        android:textAlignment="center"
+        android:padding="16dp"
+        android:layout_below="@id/verifyBtn"
+        android:textSize="18sp"
+        android:id="@+id/textview3"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/textview3"
+        android:text="or"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Number"
+        android:textColor="@color/light"
+        android:textAlignment="center"
+        android:padding="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/textview3"
+        android:textSize="18sp"
+        android:id="@+id/changeNumber"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/verifyBtn"
+        android:layout_marginTop="100dp"
+        android:visibility="invisible"
+        android:id="@+id/progressBarOtp" />
+
+
+</RelativeLayout>

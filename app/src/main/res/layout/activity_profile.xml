@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.ProfileActivity"
+    android:background="@color/dark">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="@color/light_dark"
+        android:id="@+id/toolbarProfile">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/backBtn"
+                app:tint="@color/white"
+                android:layout_marginStart="0dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Profile"
+                android:textSize="24sp"
+                android:layout_toEndOf="@id/backBtn"
+                android:textStyle="bold"
+                android:textColor="@color/light"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:id="@+id/yourProfile" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/toolbarProfile"
+        android:layout_marginTop="90dp"
+        android:id="@+id/viewUserImg"
+        app:cardCornerRadius="65dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile_png_icon"
+            android:id="@+id/viewUserImgIV"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/logOfViewProfile"
+        android:src="@drawable/ic_baseline_person_24"
+        app:tint="@color/green"
+        android:layout_alignLeft="@id/viewUserName"
+        android:layout_marginLeft="-50dp"
+        android:layout_centerInParent="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/viewUserName"
+        android:clickable="false"
+        android:enabled="false"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:hint="Enter Your Name"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp"
+        android:background="@color/light_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/light"
+        android:padding="16dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/changeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="change"
+        android:textColor="@color/dark"
+        android:textColorHighlight="@color/dark_green"
+        android:textStyle="bold"
+        app:backgroundTint="@color/green"
+        android:layout_below="@id/viewUserName"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+
+
+</RelativeLayout>
